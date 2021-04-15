@@ -32,7 +32,7 @@ int main() {
     sort(E + 1, E + m + 1, [&](Edge u, Edge v) {
         return u.w < v.w;
     }); // lambda function here
-    int ans = 0;
+    long long ans = 0; // sum of weight can be long long
     memset(p, -1, sizeof p);
     for (int i = 1; i <= m; ++i) {
         if (Union(E[i].u, E[i].v)) ans += E[i].w;
