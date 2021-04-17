@@ -24,9 +24,11 @@ int main() {
         pair <long long, int> h = {0, 0};
         string s; cin >> s;
         string r;
+        pair <long long, int> h;
         for (char c: s) {
-            r += c;
-            cnt[Hash(r)]++;
+            h.first = h.first * B + c - 'a' + 1; // + 1 để tránh trường hợp hash của aa = hash của a.
+            h.second = (h.second * B + c - 'a' + 1) % BASE;
+            cnt[h]++;
         }
     }
     int q; cin >> q;
