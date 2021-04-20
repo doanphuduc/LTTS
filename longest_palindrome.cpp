@@ -3,7 +3,7 @@
 using namespace std;
 
 const int N = 2e5 + 10;
-const int B = 1e5 + 7;
+const int B = 1e5 + 3;
 
 // Tested: https://oj.vnoi.info/problem/paliny
 
