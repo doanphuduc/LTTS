@@ -4,11 +4,12 @@ using namespace std;
 
 map <long long, int> cnt;
 
-const int B = 1e5 + 7;
+const int B = 1e5 + 3;
+const int BASE = 1e9 + 21;
 
 long long Hash(string &s) {
     long long h = 0;
-    for (char c: s) h = h * B + c;
+    for (char c: s) h = (h * B + c) % BASE;
     return h;
 }
 
@@ -18,7 +19,7 @@ int main() {
         string s; cin >> s;
         long long h = 0;
         for (char c: s) {
-            h = h * B + c;
+            h = (h * B + c) % BASE;
             cnt[h]++;
         }
     }
